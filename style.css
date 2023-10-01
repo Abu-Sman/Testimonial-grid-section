@@ -1,0 +1,175 @@
+/* General styles */
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.container {
+  background-color: hsl(210, 46%, 95%);
+  padding: 5rem 2.5rem;
+}
+
+/* Testimonial section */
+.testimonials {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.testimonial {
+  border-radius: 8px;
+  padding: 3rem;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.img-name-box {
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.customer-img {
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+}
+
+.name {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.name-box span {
+  font-size: 1.3rem;
+  opacity: 50%;
+}
+
+.testimonial-title {
+  font-size: 2rem;
+  /* font-weight: 600; */
+  line-height: 1.4;
+  margin-bottom: 2.2rem;
+}
+
+.testimonial-review {
+  line-height: 1.5;
+  opacity: 70%;
+}
+
+.first,
+.second,
+.fourth {
+  color: hsl(0, 0%, 81%);
+}
+
+.first .testimonial-title,
+.second .testimonial-title,
+.fourth .testimonial-title {
+  color: hsl(0, 0%, 100%);
+}
+
+.first .customer-img {
+  border: 2px solid hsla(0, 0%, 81%, 0.5);
+}
+.fourth .customer-img {
+  border: 2px solid hsl(263, 55%, 52%);
+}
+
+.first {
+  background-image: url(images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position-x: 90%;
+  background-color: hsl(263, 55%, 52%);
+  position: relative;
+}
+
+.second {
+  background-color: hsl(217, 19%, 35%);
+}
+
+.third {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.fourth {
+  background-color: hsl(219, 29%, 14%);
+}
+
+.fifth {
+  background-color: hsl(0, 0%, 100%);
+}
+
+/* Attribution  */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Media queries */
+/* for laptops */
+@media (min-width: 90em) {
+  .container {
+    height: 100vh;
+  }
+
+  .testimonials {
+    width: 85%;
+    margin-top: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+  }
+
+  .first {
+    grid-column: 1/3;
+  }
+
+  .third {
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+
+  .fourth {
+    grid-column: 2/4;
+  }
+
+  .fifth {
+    grid-row: 1/3;
+    grid-column: 4/5;
+  }
+}
+
+/* for desktops */
+@media (min-width: 95em) {
+  .container {
+    width: 80vw;
+    height: 80vh;
+    margin: 7rem auto;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1),
+      -10px -10px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .testimonials {
+    width: 70%;
+    margin-top: 0;
+  }
+}
